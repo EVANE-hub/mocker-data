@@ -18,13 +18,23 @@ const apiDoc = YAML.load(openapiPath);
 console.log("📘 Chargement du schéma OpenAPI...");
 console.log(`→ ${Object.keys(apiDoc.paths).length} endpoints trouvés.`);
 
-// Configuration de Swagger UI
+// Configuration de Swagger UI avec options améliorées
 const swaggerOptions = {
+  explorer: true,
   customCss: '.swagger-ui .topbar { display: none }',
   customSiteTitle: 'Zerve API Documentation',
+  swaggerOptions: {
+    url: '/api-spec.json',
+  }
 };
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(apiDoc, swaggerOptions));
+// Servir la spécification OpenAPI en JSON
+app.get('/api-spec.json', (req, res) => {
+  res.json(apiDoc);
+});
+
+// Route pour Swagger UI
+app.use('/api-docs', swaggerUi.serveFiles(apiDoc, swaggerOptions), swaggerUi.setup(apiDoc, swaggerOptions));
 
 /**
  * Charge un fichier de mock depuis le dossier mock-data
