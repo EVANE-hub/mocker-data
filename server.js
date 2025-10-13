@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const YAML = require('yamljs');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,6 +17,14 @@ const apiDoc = YAML.load(openapiPath);
 
 console.log("📘 Chargement du schéma OpenAPI...");
 console.log(`→ ${Object.keys(apiDoc.paths).length} endpoints trouvés.`);
+
+// Configuration de Swagger UI
+const swaggerOptions = {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'Zerve API Documentation',
+};
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(apiDoc, swaggerOptions));
 
 /**
  * Charge un fichier de mock depuis le dossier mock-data
@@ -110,7 +119,8 @@ app.use((req, res) => {
 
 app.listen(port, () => {
   console.log(`🚀 Mock server Zerve démarré sur http://localhost:${port}`);
-  console.log(`📚 Documentation: http://localhost:${port}/health`);
+  console.log(`📚 Documentation Swagger: http://localhost:${port}/api-docs`);
+  console.log(`📊 Health check: http://localhost:${port}/health`);
   console.log(`\n💡 Exemples d'endpoints:`);
   console.log(`   GET  http://localhost:${port}/auth/ping`);
   console.log(`   GET  http://localhost:${port}/nightclubs`);
