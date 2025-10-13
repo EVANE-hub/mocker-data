@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zerve API Documentation</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+  <style>
+    html {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .swagger-ui .topbar {
+      display: none;
+    }
+    .custom-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .custom-header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 300;
+    }
+    .custom-header p {
+      margin: 10px 0 0 0;
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-header">
+    <h1>🎉 Zerve API</h1>
+    <p>Documentation interactive de l'API Mock - Version 1.0.0</p>
+  </div>
+  <div id="swagger-ui"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-standalone-preset.js"></script>
+  <script>
+    window.onload = function() {
+      // Déterminer l'URL de base dynamiquement
+      const baseUrl = window.location.origin;
+      
+      window.ui = SwaggerUIBundle({
+        url: baseUrl + "/api-spec.json",
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout",
+        defaultModelsExpandDepth: 1,
+        defaultModelExpandDepth: 1,
+        docExpansion: "list",
+        filter: true,
+        showRequestHeaders: true,
+        supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+        tryItOutEnabled: true,
+        requestInterceptor: (req) => {
+          // Ajouter l'URL de base pour les requêtes Try it out
+          if (!req.url.startsWith('http')) {
+            req.url = baseUrl + req.url;
+          }
+          return req;
+        }
+      });
+    };
+  </script>
+</body>
+</html>
