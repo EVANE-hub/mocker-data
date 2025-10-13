@@ -1,0 +1,70 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "nightclub_id": 1,
+            "number": 1,
+            "capacity": 8,
+            "min_spend": 50000,
+            "position_x": 100,
+            "position_y": 150,
+            "rotation": 0,
+            "status": "available",
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-13T10:00:00Z"
+        },
+        {
+            "id": 2,
+            "nightclub_id": 1,
+            "number": 2,
+            "capacity": 6,
+            "min_spend": 40000,
+            "position_x": 250,
+            "position_y": 150,
+            "rotation": 0,
+            "status": "reserved",
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-13T14:20:00Z"
+        },
+        {
+            "id": 3,
+            "nightclub_id": 1,
+            "number": 3,
+            "capacity": 10,
+            "min_spend": 80000,
+            "position_x": 400,
+            "position_y": 200,
+            "rotation": 45,
+            "status": "available",
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-13T09:00:00Z"
+        },
+        {
+            "id": 4,
+            "nightclub_id": 1,
+            "number": 4,
+            "capacity": 4,
+            "min_spend": 30000,
+            "position_x": 150,
+            "position_y": 300,
+            "rotation": 0,
+            "status": "available",
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-12T22:00:00Z"
+        },
+        {
+            "id": 5,
+            "nightclub_id": 1,
+            "number": 5,
+            "capacity": 12,
+            "min_spend": 100000,
+            "position_x": 500,
+            "position_y": 100,
+            "rotation": 90,
+            "status": "disabled",
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-11T16:00:00Z"
+        }
+    ],
+    "total": 5
+}

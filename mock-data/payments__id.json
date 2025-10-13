@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "user_id": 5,
+    "reservation_id": 1,
+    "order_id": null,
+    "amount": 10833,
+    "method": "card",
+    "status": "completed",
+    "transaction_id": "txn_123456789",
+    "created_at": "2025-10-12T18:00:00Z"
+}

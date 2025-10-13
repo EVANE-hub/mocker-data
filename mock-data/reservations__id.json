@@ -1,0 +1,16 @@
+{
+    "id": 1,
+    "nightclub_id": 1,
+    "user_id": 1,
+    "table_id": 2,
+    "date": "2025-10-18",
+    "arrival_time": "23:30:00",
+    "guest_count": 6,
+    "male_count": 3,
+    "female_count": 3,
+    "amount": 65000,
+    "status": "confirmed",
+    "note": "Anniversaire - prévoir bougies",
+    "created_at": "2025-10-12T15:30:00Z",
+    "updated_at": "2025-10-13T09:00:00Z"
+}

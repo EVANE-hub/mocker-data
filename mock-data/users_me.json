@@ -1,0 +1,18 @@
+{
+    "id": 1,
+    "firstname": "Sophie",
+    "lastname": "Martin",
+    "email": "sophie.martin@example.com",
+    "tel": "+33612345678",
+    "gender": "female",
+    "birthdate": "1995-03-15",
+    "role_id": 1,
+    "role": {
+        "id": 1,
+        "name": "user",
+        "description": "Utilisateur standard"
+    },
+    "profile_image": "https://example.com/images/sophie.jpg",
+    "created_at": "2025-01-10T10:00:00Z",
+    "updated_at": "2025-10-13T09:00:00Z"
+}

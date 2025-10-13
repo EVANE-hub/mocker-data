@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "reservation_id": 1,
+    "user_id": 5,
+    "invited_by": 1,
+    "phone": "+33612341111",
+    "status": "accepted",
+    "amount_due": 10833,
+    "amount_paid": 10833,
+    "created_at": "2025-10-12T16:00:00Z"
+}

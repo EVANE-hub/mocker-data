@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "owner_id": 2,
+    "name": "Le Moonlight",
+    "description": "Le club le plus tendance de Paris avec une ambiance électro et une vue imprenable",
+    "address": "15 Rue de Rivoli",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 48.856614,
+    "longitude": 2.352222,
+    "phone": "+33142345678",
+    "website": "https://lemoonlight.fr",
+    "created_at": "2025-01-15T10:00:00Z",
+    "updated_at": "2025-10-10T15:30:00Z"
+}

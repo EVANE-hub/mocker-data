@@ -1,0 +1,18 @@
+{
+    "id": 2,
+    "firstname": "Alexandre",
+    "lastname": "Dubois",
+    "email": "alex.dubois@example.com",
+    "tel": "+33698765432",
+    "gender": "male",
+    "birthdate": "1992-07-22",
+    "role_id": 2,
+    "role": {
+        "id": 2,
+        "name": "manager",
+        "description": "Gérant d'établissement"
+    },
+    "profile_image": "https://example.com/images/alex.jpg",
+    "created_at": "2025-02-05T14:30:00Z",
+    "updated_at": "2025-10-12T18:00:00Z"
+}

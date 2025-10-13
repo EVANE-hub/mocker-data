@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "nightclub_id": 1,
+            "user_id": 1,
+            "user_name": "Sophie Martin",
+            "table_id": 2,
+            "table_number": 2,
+            "date": "2025-10-18",
+            "arrival_time": "23:30:00",
+            "guest_count": 6,
+            "male_count": 3,
+            "female_count": 3,
+            "amount": 65000,
+            "status": "confirmed",
+            "note": "Anniversaire - prévoir bougies",
+            "created_at": "2025-10-12T15:30:00Z"
+        },
+        {
+            "id": 2,
+            "nightclub_id": 1,
+            "user_id": 1,
+            "user_name": "Sophie Martin",
+            "table_id": 1,
+            "table_number": 1,
+            "date": "2025-10-25",
+            "arrival_time": "00:00:00",
+            "guest_count": 8,
+            "male_count": 4,
+            "female_count": 4,
+            "amount": 80000,
+            "status": "pending",
+            "note": null,
+            "created_at": "2025-10-13T10:00:00Z"
+        }
+    ],
+    "total": 2,
+    "stats": {
+        "pending": 1,
+        "confirmed": 1,
+        "total_revenue": 145000
+    }
+}

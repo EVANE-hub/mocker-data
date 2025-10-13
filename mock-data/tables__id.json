@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "nightclub_id": 1,
+    "number": 1,
+    "capacity": 8,
+    "min_spend": 50000,
+    "position_x": 100,
+    "position_y": 150,
+    "rotation": 0,
+    "status": "available",
+    "created_at": "2025-01-15T10:00:00Z",
+    "updated_at": "2025-10-13T10:00:00Z"
+}

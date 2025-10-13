@@ -1,0 +1,8 @@
+{
+    "id": 1,
+    "nightclub_id": 1,
+    "allow_male_only": false,
+    "min_women_ratio": 0.30,
+    "max_people_per_table": 10,
+    "dynamic_pricing": true
+}

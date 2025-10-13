@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "type": "reservation_confirmed",
+            "title": "Réservation confirmée",
+            "message": "Votre réservation au Moonlight pour le 18/10 à 23h30 est confirmée",
+            "related_id": 1,
+            "is_read": true,
+            "created_at": "2025-10-13T09:00:00Z"
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "type": "payment_reminder",
+            "title": "Rappel de paiement",
+            "message": "Il reste 54 167€ à régler pour votre réservation du 18/10",
+            "related_id": 1,
+            "is_read": false,
+            "created_at": "2025-10-13T12:00:00Z"
+        },
+        {
+            "id": 3,
+            "user_id": 1,
+            "type": "guest_accepted",
+            "title": "Invité confirmé",
+            "message": "Marie a accepté votre invitation",
+            "related_id": 1,
+            "is_read": false,
+            "created_at": "2025-10-13T14:00:00Z"
+        }
+    ],
+    "total": 3,
+    "unread_count": 2
+}

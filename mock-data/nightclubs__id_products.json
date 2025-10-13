@@ -1,0 +1,109 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "nightclub_id": 1,
+            "category_id": 1,
+            "name": "Dom Pérignon Vintage",
+            "description": "Champagne millésimé d'exception",
+            "price": 45000,
+            "image_url": "https://example.com/products/dom-perignon.jpg",
+            "is_available": true,
+            "is_featured": true,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 2,
+            "nightclub_id": 1,
+            "category_id": 1,
+            "name": "Moët & Chandon Imperial",
+            "description": "Champagne emblématique",
+            "price": 25000,
+            "image_url": "https://example.com/products/moet.jpg",
+            "is_available": true,
+            "is_featured": true,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 3,
+            "nightclub_id": 1,
+            "category_id": 2,
+            "name": "Grey Goose 70cl",
+            "description": "Vodka française premium",
+            "price": 35000,
+            "image_url": "https://example.com/products/grey-goose.jpg",
+            "is_available": true,
+            "is_featured": false,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 4,
+            "nightclub_id": 1,
+            "category_id": 2,
+            "name": "Hennessy VS",
+            "description": "Cognac de référence",
+            "price": 32000,
+            "image_url": "https://example.com/products/hennessy.jpg",
+            "is_available": true,
+            "is_featured": false,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 5,
+            "nightclub_id": 1,
+            "category_id": 3,
+            "name": "Mojito Royal",
+            "description": "Mojito revisité au champagne",
+            "price": 1800,
+            "image_url": "https://example.com/products/mojito-royal.jpg",
+            "is_available": true,
+            "is_featured": true,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 6,
+            "nightclub_id": 1,
+            "category_id": 3,
+            "name": "Cosmopolitan",
+            "description": "Classique revisité",
+            "price": 1500,
+            "image_url": "https://example.com/products/cosmopolitan.jpg",
+            "is_available": true,
+            "is_featured": false,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 7,
+            "nightclub_id": 1,
+            "category_id": 4,
+            "name": "Eau minérale",
+            "description": "Bouteille 50cl",
+            "price": 800,
+            "image_url": "https://example.com/products/water.jpg",
+            "is_available": true,
+            "is_featured": false,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        },
+        {
+            "id": 8,
+            "nightclub_id": 1,
+            "category_id": 4,
+            "name": "Red Bull",
+            "description": "Energy drink",
+            "price": 1200,
+            "image_url": "https://example.com/products/redbull.jpg",
+            "is_available": true,
+            "is_featured": false,
+            "created_at": "2025-01-15T10:00:00Z",
+            "updated_at": "2025-10-10T12:00:00Z"
+        }
+    ],
+    "total": 8
+}
