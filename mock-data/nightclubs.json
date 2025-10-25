@@ -2,48 +2,42 @@
     "data": [
         {
             "id": 1,
-            "owner_id": 2,
             "name": "Le Moonlight",
-            "description": "Le club le plus tendance de Paris avec une ambiance électro et une vue imprenable",
-            "address": "15 Rue de Rivoli",
             "city": "Paris",
-            "country": "France",
-            "latitude": 48.856614,
-            "longitude": 2.352222,
-            "phone": "+33142345678",
-            "website": "https://lemoonlight.fr",
-            "created_at": "2025-01-15T10:00:00Z",
-            "updated_at": "2025-10-10T15:30:00Z"
+            "image": "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=800",
+            "music_types": [
+                "Électro",
+                "House",
+                "Techno"
+            ],
+            "total_tables": 15,
+            "rating": 4.5
         },
         {
             "id": 2,
-            "owner_id": 3,
             "name": "Club Sensation",
-            "description": "Soirées house et techno dans un cadre moderne",
-            "address": "42 Avenue des Champs-Élysées",
             "city": "Paris",
-            "country": "France",
-            "latitude": 48.869983,
-            "longitude": 2.307839,
-            "phone": "+33143456789",
-            "website": "https://clubsensation.fr",
-            "created_at": "2025-02-20T11:00:00Z",
-            "updated_at": "2025-09-25T12:00:00Z"
+            "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
+            "music_types": [
+                "House",
+                "Techno",
+                "Deep House"
+            ],
+            "total_tables": 12,
+            "rating": 4.3
         },
         {
             "id": 3,
-            "owner_id": 2,
             "name": "La Fabrik",
-            "description": "Club underground avec les meilleurs DJs internationaux",
-            "address": "88 Rue Oberkampf",
             "city": "Paris",
-            "country": "France",
-            "latitude": 48.865382,
-            "longitude": 2.380539,
-            "phone": "+33144567890",
-            "website": "https://lafabrik.com",
-            "created_at": "2025-03-01T09:00:00Z",
-            "updated_at": "2025-10-05T20:00:00Z"
+            "image": "https://images.unsplash.com/photo-1571266028243-d220c9e1f455?w=800",
+            "music_types": [
+                "Techno",
+                "Minimal",
+                "Progressive"
+            ],
+            "total_tables": 20,
+            "rating": 4.7
         }
     ],
     "total": 3

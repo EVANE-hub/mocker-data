@@ -94,6 +94,13 @@ function handleMutation(method, route, req, res) {
   }
 }
 
+// Routes manuelles supplémentaires (non présentes dans OpenAPI)
+app.get('/friends', (req, res) => {
+  console.log('[GET] /friends');
+  const data = loadMockData('friends');
+  res.json(data);
+});
+
 
 let routeCount = 0;
 for (const [route, methods] of Object.entries(apiDoc.paths)) {

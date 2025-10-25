@@ -6,13 +6,34 @@
     "tel": "+33612345678",
     "gender": "female",
     "birthdate": "1995-03-15",
-    "role_id": 1,
-    "role": {
-        "id": 1,
-        "name": "user",
-        "description": "Utilisateur standard"
-    },
-    "profile_image": "https://example.com/images/sophie.jpg",
+    "profile_image": "https://i.pravatar.cc/150?img=47",
+    "music_preferences": [
+        "Électro",
+        "House",
+        "Techno",
+        "Deep House"
+    ],
+    "nightclubs": [
+        {
+            "id": 1,
+            "name": "Le Moonlight",
+            "image": "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=400",
+            "nb_outings": 12
+        },
+        {
+            "id": 2,
+            "name": "Club Sensation",
+            "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400",
+            "nb_outings": 8
+        },
+        {
+            "id": 3,
+            "name": "La Fabrik",
+            "image": "https://images.unsplash.com/photo-1571266028243-d220c9e1f455?w=400",
+            "nb_outings": 5
+        }
+    ],
+    "total_outings": 25,
     "created_at": "2025-01-10T10:00:00Z",
-    "updated_at": "2025-10-13T09:00:00Z"
+    "updated_at": "2025-10-25T09:00:00Z"
 }

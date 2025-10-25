@@ -1,16 +1,70 @@
 {
     "id": 1,
+    "title": "Anniversaire Sophie 🎉",
     "nightclub_id": 1,
+    "nightclub_name": "Le Moonlight",
+    "nightclub_image": "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=800",
+    "nightclub_address": "15 Rue de Rivoli, Paris",
     "user_id": 1,
     "table_id": 2,
-    "date": "2025-10-18",
+    "table_number": 2,
+    "table_capacity": 6,
+    "date": "2025-10-28",
     "arrival_time": "23:30:00",
     "guest_count": 6,
     "male_count": 3,
-    "female_count": 3,
+    "female_count": 2,
+    "other_count": 1,
     "amount": 65000,
+    "amount_paid": 10833,
+    "amount_remaining": 54167,
     "status": "confirmed",
-    "note": "Anniversaire - prévoir bougies",
+    "note": "Anniversaire - prévoir bougies et champagne frappé",
+    "qr_code": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ZERVE-RES-1",
+    "guests": [
+        {
+            "id": 1,
+            "user_id": 5,
+            "name": "Lucas Petit",
+            "status": "accepted",
+            "amount_due": 10833,
+            "amount_paid": 10833
+        },
+        {
+            "id": 2,
+            "user_id": 6,
+            "name": "Marie Dubois",
+            "status": "accepted",
+            "amount_due": 10833,
+            "amount_paid": 0
+        },
+        {
+            "id": 3,
+            "user_id": null,
+            "name": "Invité +1",
+            "status": "invited",
+            "amount_due": 10833,
+            "amount_paid": 0
+        }
+    ],
+    "items": [
+        {
+            "id": 1,
+            "product_id": 2,
+            "product_name": "Moët & Chandon Imperial",
+            "quantity": 2,
+            "unit_price": 25000,
+            "total_price": 50000
+        },
+        {
+            "id": 2,
+            "product_id": 5,
+            "product_name": "Mojito Royal",
+            "quantity": 6,
+            "unit_price": 1800,
+            "total_price": 10800
+        }
+    ],
     "created_at": "2025-10-12T15:30:00Z",
     "updated_at": "2025-10-13T09:00:00Z"
 }

@@ -1,0 +1,72 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "user_id": 5,
+            "firstname": "Lucas",
+            "lastname": "Petit",
+            "email": "lucas.petit@example.com",
+            "profile_image": "https://i.pravatar.cc/150?img=12",
+            "gender": "male",
+            "status": "accepted",
+            "since": "2025-03-15T10:00:00Z",
+            "common_outings": 12,
+            "last_outing": "2025-10-05T23:00:00Z"
+        },
+        {
+            "id": 2,
+            "user_id": 6,
+            "firstname": "Marie",
+            "lastname": "Dubois",
+            "email": "marie.dubois@example.com",
+            "profile_image": "https://i.pravatar.cc/150?img=23",
+            "gender": "female",
+            "status": "accepted",
+            "since": "2025-01-20T14:30:00Z",
+            "common_outings": 8,
+            "last_outing": "2025-10-12T22:30:00Z"
+        },
+        {
+            "id": 3,
+            "user_id": 8,
+            "firstname": "Thomas",
+            "lastname": "Bernard",
+            "email": "thomas.bernard@example.com",
+            "profile_image": "https://i.pravatar.cc/150?img=33",
+            "gender": "male",
+            "status": "accepted",
+            "since": "2025-05-10T09:00:00Z",
+            "common_outings": 5,
+            "last_outing": "2025-09-28T23:15:00Z"
+        },
+        {
+            "id": 4,
+            "user_id": 9,
+            "firstname": "Julie",
+            "lastname": "Moreau",
+            "email": "julie.moreau@example.com",
+            "profile_image": "https://i.pravatar.cc/150?img=45",
+            "gender": "female",
+            "status": "pending",
+            "since": "2025-10-20T16:45:00Z",
+            "common_outings": 0,
+            "last_outing": null
+        },
+        {
+            "id": 5,
+            "user_id": 10,
+            "firstname": "Alex",
+            "lastname": "Laurent",
+            "email": "alex.laurent@example.com",
+            "profile_image": "https://i.pravatar.cc/150?img=68",
+            "gender": "other",
+            "status": "pending",
+            "since": "2025-10-22T11:20:00Z",
+            "common_outings": 0,
+            "last_outing": null
+        }
+    ],
+    "total": 5,
+    "accepted": 3,
+    "pending": 2
+}
