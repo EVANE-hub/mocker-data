@@ -3,41 +3,44 @@
         {
             "id": 1,
             "name": "Le Moonlight",
+            "address": "15 Rue de Rivoli",
             "city": "Paris",
+            "latitude": 48.856614,
+            "longitude": 2.352222,
             "image": "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=800",
             "music_types": [
                 "Électro",
                 "House",
                 "Techno"
-            ],
-            "total_tables": 15,
-            "rating": 4.5
+            ]
         },
         {
             "id": 2,
             "name": "Club Sensation",
+            "address": "23 Boulevard de Clichy",
             "city": "Paris",
+            "latitude": 48.883611,
+            "longitude": 2.335833,
             "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
             "music_types": [
                 "House",
                 "Techno",
                 "Deep House"
-            ],
-            "total_tables": 12,
-            "rating": 4.3
+            ]
         },
         {
             "id": 3,
             "name": "La Fabrik",
+            "address": "45 Avenue des Champs-Élysées",
             "city": "Paris",
+            "latitude": 48.871111,
+            "longitude": 2.308333,
             "image": "https://images.unsplash.com/photo-1571266028243-d220c9e1f455?w=800",
             "music_types": [
                 "Techno",
                 "Minimal",
                 "Progressive"
-            ],
-            "total_tables": 20,
-            "rating": 4.7
+            ]
         }
     ],
     "total": 3

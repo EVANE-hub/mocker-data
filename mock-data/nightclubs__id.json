@@ -1,41 +1,57 @@
 {
     "id": 1,
-    "owner_id": 2,
     "name": "Le Moonlight",
-    "description": "Le club le plus tendance de Paris avec une ambiance électro et une vue imprenable sur la Seine. Venez profiter de nos DJ internationaux tous les week-ends.",
+    "address": "15 Rue de Rivoli",
+    "city": "Paris",
+    "latitude": 48.856614,
+    "longitude": 2.352222,
     "image": "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=800",
     "music_types": [
         "Électro",
         "House",
         "Techno"
     ],
-    "address": "15 Rue de Rivoli",
-    "city": "Paris",
-    "country": "France",
-    "latitude": 48.856614,
-    "longitude": 2.352222,
-    "phone": "+33142345678",
-    "website": "https://lemoonlight.fr",
-    "email": "contact@lemoonlight.fr",
+    "description": "Le club le plus tendance de Paris avec une ambiance électro et une vue imprenable sur la Seine. Venez profiter de nos DJ internationaux tous les week-ends.",
     "total_tables": 15,
-    "rating": 4.5,
-    "total_reviews": 248,
-    "price_range": "€€€",
-    "dress_code": "Élégant",
-    "min_age": 21,
-    "capacity": 500,
-    "features": [
-        "Bar",
-        "VIP",
-        "Terrasse",
-        "Vestiaire",
-        "Fumoir"
-    ],
-    "social_media": {
-        "instagram": "@lemoonlight",
-        "facebook": "lemoonlightparis",
-        "tiktok": "@lemoonlight"
-    },
-    "created_at": "2025-01-15T10:00:00Z",
-    "updated_at": "2025-10-10T15:30:00Z"
+    "website": "https://lemoonlight.fr",
+    "opening_hours": [
+        {
+            "day": "Lundi",
+            "is_closed": true
+        },
+        {
+            "day": "Mardi",
+            "is_closed": true
+        },
+        {
+            "day": "Mercredi",
+            "is_closed": false,
+            "open_time": "23:00",
+            "close_time": "05:00"
+        },
+        {
+            "day": "Jeudi",
+            "is_closed": false,
+            "open_time": "23:00",
+            "close_time": "05:00"
+        },
+        {
+            "day": "Vendredi",
+            "is_closed": false,
+            "open_time": "23:00",
+            "close_time": "06:00"
+        },
+        {
+            "day": "Samedi",
+            "is_closed": false,
+            "open_time": "23:00",
+            "close_time": "06:00"
+        },
+        {
+            "day": "Dimanche",
+            "is_closed": false,
+            "open_time": "22:00",
+            "close_time": "04:00"
+        }
+    ]
 }

@@ -398,7 +398,7 @@ GET /pro/me
   "firstname": "Alexandre",
   "lastname": "Dubois",
   "email": "alex@lemoonlight.fr",
-  "role": "manager",           // manager, staff, admin
+  "role": "manager",           
   "nightclub_id": 1,
   "nightclub_name": "Le Moonlight",
   "permissions": [
