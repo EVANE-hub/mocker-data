@@ -11,10 +11,5 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3002
-    volumes:
-      # Monter les données mock pour pouvoir les modifier sans rebuild
-      - ./mock-data:/app/mock-data:ro
-      # Monter le fichier OpenAPI pour pouvoir le modifier sans rebuild
-      - ./zerve-openapi.yaml:/app/zerve-openapi.yaml:ro
     restart: unless-stopped
 
