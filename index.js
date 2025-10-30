@@ -139,12 +139,14 @@ app.use((req, res) => {
 });
 
 const server = app.listen(port, host, () => {
+  const displayHost = process.env.PUBLIC_URL || (host === '0.0.0.0' ? '0.0.0.0' : host);
   console.log('='.repeat(60));
   console.log(`🚀 Zerve Mock Server`);
-  console.log(`📚 API Documentation: http://${host === '0.0.0.0' ? 'localhost' : host}:${port}/api-docs`);
-  console.log(`💚 Health Check: http://${host === '0.0.0.0' ? 'localhost' : host}:${port}/health`);
+  console.log(`📚 API Documentation: http://${displayHost}:${port}/api-docs`);
+  console.log(`💚 Health Check: http://${displayHost}:${port}/health`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`📊 Routes: ${routeCount} API endpoints`);
+  console.log(`🎯 Listening on: ${host}:${port}`);
   console.log('='.repeat(60));
 });
 
