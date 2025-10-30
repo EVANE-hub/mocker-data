@@ -23,7 +23,7 @@ const swaggerOptions = {
 };
 
 // Route pour Swagger UI uniquement
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(apiDoc, swaggerOptions));
+app.use('/', swaggerUi.serve, swaggerUi.setup(apiDoc, swaggerOptions));
 
 
 /**
@@ -68,7 +68,6 @@ function handleMutation(method, route, req, res) {
   }
 }
 
-// Enregistrement des routes depuis OpenAPI
 for (const [route, methods] of Object.entries(apiDoc.paths)) {
   for (const [method, def] of Object.entries(methods)) {
     const expressRoute = route.replace(/{(\w+)}/g, ':$1');
@@ -90,7 +89,7 @@ for (const [route, methods] of Object.entries(apiDoc.paths)) {
 // Pour le développement local
 if (process.env.NODE_ENV !== 'production') {
   app.listen(port, () => {
-    console.log(`🚀 Zerve API Docs disponible sur http://localhost:${port}/api-docs`);
+    console.log(`🚀 Zerve API Docs disponible sur http://mocker-data-ten.vercel.app/api-docs`);
   });
 }
 
