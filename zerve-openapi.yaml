@@ -15,10 +15,10 @@ externalDocs:
   description: Documentation produit
   url: https://zerve.app/docs
 servers:
+  - url: http://localhost:3002
+    description: Local Mock Server
   - url: https://api.zerve.app/v1
     description: Production
-  - url: https://staging.api.zerve.app/v1
-    description: Staging
 tags:
   - name: Auth
     description: Authentification basique par API key
@@ -54,6 +54,7 @@ paths:
       tags: [Auth]
       summary: Vérifier l'accès API
       description: Retourne un pong si l'API key est valide.
+      security: []  # endpoint public pour les tests
       responses:
         '200':
           description: OK
