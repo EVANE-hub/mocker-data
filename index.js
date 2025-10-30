@@ -86,10 +86,10 @@ for (const [route, methods] of Object.entries(apiDoc.paths)) {
   }
 }
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(port, () => {
-    console.log(`🚀 Zerve API Docs disponible sur http://mocker-data-ten.vercel.app/api-docs`);
-  });
-}
+// Démarrer le serveur
+app.listen(port, '0.0.0.0', () => {
+  console.log(`🚀 Zerve API Docs disponible sur http://localhost:${port}`);
+  console.log(`📚 Documentation: http://localhost:${port}`);
+});
 
 module.exports = app;
