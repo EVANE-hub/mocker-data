@@ -17,9 +17,4 @@ services:
       # Monter le fichier OpenAPI pour pouvoir le modifier sans rebuild
       - ./zerve-openapi.yaml:/app/zerve-openapi.yaml:ro
     restart: unless-stopped
-    networks:
-      - zerve-network
 
-networks:
-  zerve-network:
-    driver: bridge
