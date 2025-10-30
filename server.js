@@ -87,6 +87,12 @@ for (const [route, methods] of Object.entries(apiDoc.paths)) {
   }
 }
 
-app.listen(port, () => {
-  console.log(`🚀 Zerve API Docs disponible sur http://localhost:${port}/api-docs`);
-});
+// Pour le développement local
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`🚀 Zerve API Docs disponible sur http://localhost:${port}/api-docs`);
+  });
+}
+
+// Export pour Vercel
+module.exports = app;
