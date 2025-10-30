@@ -4,12 +4,12 @@ const fs = require('fs');
 const path = require('path');
 const YAML = require('yamljs');
 const bodyParser = require('body-parser');
-const swaggerUi = require('swagger-ui-express');
 
 const app = express();
 const port = parseInt(process.env.PORT || '3002', 10);
 const host = process.env.HOST || '0.0.0.0';
 
+// Middleware de logging
 app.use((req, res, next) => {
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] ${req.method} ${req.path}`);
@@ -19,6 +19,7 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(bodyParser.json());
 
+// Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ 
     status: 'healthy',
@@ -28,6 +29,7 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Charger le fichier OpenAPI
 const openapiPath = path.join(__dirname, 'zerve-openapi.yaml');
 let apiDoc;
 
@@ -109,18 +111,26 @@ for (const [route, methods] of Object.entries(apiDoc.paths)) {
 }
 console.log(`✅ ${routeCount} API routes registered`);
 
-const swaggerOptions = {
-  explorer: true,
-  customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: 'Zerve API Documentation',
-};
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(apiDoc, swaggerOptions));
-
-app.get('/', (req, res) => {
-  res.redirect('/api-docs');
+// Route pour servir la spec OpenAPI en JSON (optionnel)
+app.get('/api-spec', (req, res) => {
+  res.json(apiDoc);
 });
 
+// Page d'accueil simple
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Zerve Mock API Server',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      spec: '/api-spec',
+      documentation: 'See OpenAPI spec at /api-spec'
+    },
+    totalRoutes: routeCount
+  });
+});
+
+// Error handler middleware
 app.use((err, req, res, next) => {
   console.error('❌ Error:', err);
   res.status(500).json({
@@ -130,6 +140,7 @@ app.use((err, req, res, next) => {
   });
 });
 
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({
     error: 'Not Found',
@@ -142,10 +153,11 @@ const server = app.listen(port, host, () => {
   const displayHost = process.env.PUBLIC_URL || (host === '0.0.0.0' ? '0.0.0.0' : host);
   console.log('='.repeat(60));
   console.log(`🚀 Zerve Mock Server`);
-  console.log(`📚 API Documentation: http://${displayHost}:${port}/api-docs`);
+  console.log(`� API Base URL: http://${displayHost}:${port}`);
   console.log(`💚 Health Check: http://${displayHost}:${port}/health`);
+  console.log(`📄 OpenAPI Spec: http://${displayHost}:${port}/api-spec`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`📊 Routes: ${routeCount} API endpoints`);
+  console.log(`📊 API Routes: ${routeCount} endpoints`);
   console.log(`🎯 Listening on: ${host}:${port}`);
   console.log('='.repeat(60));
 });
