@@ -1,23 +1,35 @@
-# Utiliser l'image Node.js officielle
-FROM node:20-alpine
+FROM node:20-alpine AS builder
 
-# Définir le répertoire de travail
 WORKDIR /app
 
-# Copier les fichiers de dépendances
 COPY package*.json ./
 
-# Installer les dépendances
-RUN npm ci --only=production
+RUN npm ci
 
-# Copier le reste des fichiers de l'application
-COPY . .
+FROM node:20-alpine
 
-# Exposer le port 3002
+RUN apk add --no-cache dumb-init
+
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+WORKDIR /app
+
+COPY --from=builder /app/node_modules ./node_modules
+
+COPY --chown=nodejs:nodejs . .
+
+USER nodejs
+
 EXPOSE 3002
 
-# Définir la variable d'environnement pour la production
-ENV NODE_ENV=production
+ENV NODE_ENV=production \
+    PORT=3002 \
+    HOST=0.0.0.0
 
-# Démarrer l'application
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:3002/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+
+ENTRYPOINT ["dumb-init", "--"]
+
 CMD ["node", "index.js"]
